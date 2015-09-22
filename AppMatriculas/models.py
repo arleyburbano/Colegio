@@ -20,6 +20,21 @@ class Docente (models.Model):
     telefonoDoc = models.CharField(max_length=11)
 class Curso (models.Model):
     curso =models.CharField(max_length=15)
+    jornada =models.CharField(max_length=15)
+class Materia(models.Model):
+    nombreMateria =models.CharField(max_length=30)
+    Curso=models.ForeignKey(Curso)
+    Docente=models.ForeignKey(Docente)
+class Notas(models.Model):
+    Nota=models.FloatField(10)
+    Estudiante=models.ForeignKey(Estudiante)
+    Curso=models.ForeignKey(Curso)
+    Docente=models.ForeignKey(Docente)
+
+
+
+
+
 
 
 
