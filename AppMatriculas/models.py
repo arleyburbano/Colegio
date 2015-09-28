@@ -30,6 +30,9 @@ class Notas(models.Model):
     Estudiante=models.ForeignKey(Estudiante)
     Curso=models.ForeignKey(Curso)
     Docente=models.ForeignKey(Docente)
+class IngresoUsuario(models.Model):
+    Usuario=models.CharField(max_length=30)
+    Contrasena=models.CharField(max_length=30)
 
 
 

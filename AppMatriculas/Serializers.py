@@ -27,5 +27,10 @@ class NotaSerializer(ModelSerializer):
         model = Notas
         fields = ('Nota','Estudiante','Materia','Docente')
 
+class UsuarioSerializer(ModelSerializer):
+    class Meta:
+        model = IngresoUsuario
+        fields = ('Usuario', ('Contraseña'))
+
 
 
